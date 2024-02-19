@@ -92,7 +92,6 @@ public class UserController {
                                              @RequestParam("email") String email,
                                              @RequestParam("phonenumber") String phonenumber,
                                              @RequestParam("gender") String gender,
-//                                             @RequestParam("address") String address,
                                              @RequestParam("preferences") String preferences,
                                              @RequestParam("allergies") String allergies,
                                              @RequestParam("dateOfBirth") String dateOfBirth) {
@@ -107,7 +106,6 @@ public class UserController {
             user.setEmail(email);
             user.setPhonenumber(phonenumber);
             user.setGender(gender);
-//            user.setAddress(address);
             user.setPreferences(preferences);
             user.setAllergies(allergies);
             user.setDateOfBirth(dateOfBirth);
@@ -136,7 +134,7 @@ public class UserController {
                                            @RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
                                            @RequestParam("username") String username, @RequestParam("password") String password,
                                            @RequestParam("email") String email, @RequestParam("dateOfBirth") String dateOfBirth,
-                                           @RequestParam("address") String address, @RequestParam("gender") String gender,
+                                           @RequestParam("gender") String gender,
                                            @RequestParam("phonenumber") String phonenumber, @RequestParam("preferences") String preferences,
                                            @RequestParam("allergies") String allergies) {
         try {
@@ -154,7 +152,6 @@ public class UserController {
             user.setPassword(password);
             user.setEmail(email);
             user.setDateOfBirth(dateOfBirth);
-//            user.setAddress(address);
             user.setGender(gender);
             user.setPhonenumber(phonenumber);
             user.setPreferences(preferences);
@@ -175,7 +172,7 @@ public class UserController {
                                            @RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
                                            @RequestParam("username") String username, @RequestParam("password") String password,
                                            @RequestParam("email") String email, @RequestParam("dateOfBirth") String dateOfBirth,
-                                           @RequestParam("address") String address, @RequestParam("role")String role,@RequestParam("gender") String gender,
+                                           @RequestParam("role")String role,@RequestParam("gender") String gender,
                                            @RequestParam("phonenumber") String phonenumber, @RequestParam("preferences") String preferences,
                                            @RequestParam("allergies") String allergies) {
         try {
@@ -194,7 +191,6 @@ public class UserController {
             user.setRole(role);
             user.setEmail(email);
             user.setDateOfBirth(dateOfBirth);
-//            user.setAddress(address);
             user.setGender(gender);
             user.setPhonenumber(phonenumber);
             user.setPreferences(preferences);

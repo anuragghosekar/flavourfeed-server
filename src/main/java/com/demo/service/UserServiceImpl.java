@@ -1,5 +1,4 @@
 package com.demo.service;
-
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,7 +72,6 @@ public class UserServiceImpl implements UserService{
 	        u1.setPassword(u.getPassword());
 	        u1.setEmail(u.getEmail());
 	        u1.setRole(u.getRole());
-//	        u1.setAddress(u.getAddress()); 
 	        u1.setGender(u.getGender()); 
 	        u1.setPreferences(u.getPreferences()); 
 	        u1.setAllergies(u.getAllergies()); 

@@ -3,7 +3,6 @@ package com.demo.models;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -60,7 +59,7 @@ public class Recipe {
     
 	public Recipe(Integer recipeId, @NotBlank(message = "Recipe name cannot be Blank") String recipeName,
 			String instructions, String cookTime, Integer totalCalories, String recipeType, String recipeDescription,
-			User u, List<User> userRecipes, Set<Tag> recipeTags, List<Ingredient> recipeIngredients) {
+			User u, Set<User> userRecipes, Set<Tag> recipeTags, List<Ingredient> recipeIngredients) {
 		super();
 		this.recipeId = recipeId;
 		this.recipeName = recipeName;
@@ -75,7 +74,7 @@ public class Recipe {
 	
 	public Recipe(Integer recipeId, @NotBlank(message = "Recipe name cannot be Blank") String recipeName,
 			String instructions, String cookTime, Integer totalCalories, String recipeType, String recipeDescription,
-			byte[] recipe_image, User u, List<User> userRecipes, Set<Tag> recipeTags,
+			byte[] recipe_image, User u, Set<User> userRecipes, Set<Tag> recipeTags,
 			List<Ingredient> recipeIngredients) {
 		super();
 		this.recipeId = recipeId;
