@@ -48,8 +48,8 @@ public class User {
     @Column(name = "role")
     private String role;
 
-    @Column(name = "address")
-    private String address;
+//    @Column(name = "address")
+//    private String address;
 
     @Column(name = "gender")
     private String gender;
@@ -95,7 +95,7 @@ public class User {
 			@NotBlank(message = "Username is required") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters Long") String password,
 			@Email @NotBlank(message = "Email is required") String email, String DateOfBirth, String role,
-			String address, String gender, String phonenumber, String preferences, String allergies,
+			 String gender, String phonenumber, String preferences, String allergies,
 			List<Recipe> userRecipes, List<Feedback> userFeedbacks, MealPlanning m, List<Comment> userComments) {
 		super();
 		this.userId = userId;
@@ -106,7 +106,7 @@ public class User {
 		this.email = email;
 		this.DateOfBirth = DateOfBirth;
 		this.role = role;
-		this.address = address;
+//		this.address = address;
 		this.gender = gender;
 		this.phonenumber = phonenumber;
 		this.preferences = preferences;
@@ -122,7 +122,7 @@ public class User {
 			@NotBlank(message = "Username is required") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters Long") String password,
 			@Email @NotBlank(message = "Email is required") String email, String DateOfBirth, String role,
-			String address, String gender, String phonenumber, String preferences, String allergies, byte[] user_image,
+			 String gender, String phonenumber, String preferences, String allergies, byte[] user_image,
 			List<Recipe> userRecipes, List<Feedback> userFeedbacks, MealPlanning m, List<Comment> userComments) {
 		super();
 		this.userId = userId;
@@ -133,7 +133,7 @@ public class User {
 		this.email = email;
 		this.DateOfBirth = DateOfBirth;
 		this.role = role;
-		this.address = address;
+//		this.address = address;
 		this.gender = gender;
 		this.phonenumber = phonenumber;
 		this.preferences = preferences;
@@ -221,13 +221,13 @@ public class User {
 		this.userComments = userComments;
 	}
 	
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
+//	public String getAddress() {
+//		return address;
+//	}
+//
+//	public void setAddress(String address) {
+//		this.address = address;
+//	}
 
 	public String getGender() {
 		return gender;
