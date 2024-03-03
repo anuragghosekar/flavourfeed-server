@@ -32,9 +32,7 @@ public class IngredientServiceImpl implements IngredientService {
 	    	Recipe r = rdao.findById(recipeId).orElse(null);
 	    	Ingredient ingredient=new Ingredient();
 	    	ingredient.setIngredientName(i.getIngredientName());
-	    	ingredient.setCalorieCount(i.getCalorieCount());
-	    	ingredient.setIngredientDescription(i.getIngredientDescription());
-	    	ingredient.setIngredientType(i.getIngredientType());
+	    	ingredient.setQuantity(i.getQuantity());
 	    	i.setRecipe(r);
 	        idao.save(i);
 	        ingredientlist.add(ingredient);
@@ -62,8 +60,7 @@ public class IngredientServiceImpl implements IngredientService {
 		if(op.isPresent()) {
 			Ingredient i1=op.get();
 			i1.setIngredientName(i.getIngredientName());
-			i1.setIngredientType(i.getIngredientType());
-			i1.setCalorieCount(i.getCalorieCount());
+			i1.setQuantity(i.getQuantity());
 			if(idao.save(i1)!=null) {
 				return true;
 			};

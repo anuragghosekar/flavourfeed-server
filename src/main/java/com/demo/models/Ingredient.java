@@ -16,14 +16,8 @@ public class Ingredient {
     @Column(name = "ingredient_name")
     private String ingredientName;
 
-    @Column(name = "ingredient_type")
-    private String ingredientType;
-    
-    @Column(name = "ingredient_description")
-    private String ingredientDescription;
-
-    @Column(name = "calorie_count")
-    private Integer calorieCount;
+    @Column(name = "quantity")
+    private String quantity;
 
     @JsonIgnore
     @OneToOne
@@ -35,14 +29,11 @@ public class Ingredient {
 	}
 	
 	public Ingredient(Integer ingredientId,
-			@NotBlank(message = "Ingredient name cannot be Blank") String ingredientName, String ingredientType,
-			String ingredientDescription, Integer calorieCount, Recipe r) {
+			@NotBlank(message = "Ingredient name cannot be Blank") String ingredientName,String quantity, Recipe r) {
 		super();
 		this.ingredientId = ingredientId;
 		this.ingredientName = ingredientName;
-		this.ingredientType = ingredientType;
-		this.ingredientDescription = ingredientDescription;
-		this.calorieCount = calorieCount;
+		this.quantity = quantity;
 		this.recipe = r;
 	}
 
@@ -62,28 +53,14 @@ public class Ingredient {
 		this.ingredientName = ingredientName;
 	}
 
-	public String getIngredientType() {
-		return ingredientType;
+	
+
+	public String getQuantity() {
+		return quantity;
 	}
 
-	public void setIngredientType(String ingredientType) {
-		this.ingredientType = ingredientType;
-	}
-
-	public String getIngredientDescription() {
-		return ingredientDescription;
-	}
-
-	public void setIngredientDescription(String ingredientDescription) {
-		this.ingredientDescription = ingredientDescription;
-	}
-
-	public Integer getCalorieCount() {
-		return calorieCount;
-	}
-
-	public void setCalorieCount(Integer calorieCount) {
-		this.calorieCount = calorieCount;
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
 	}
 
 	public Recipe getRecipe() {
@@ -100,10 +77,4 @@ public class Ingredient {
         return (this.ingredientName == ((Ingredient)obj).ingredientName);
 }
 
-//	@Override
-//	public String toString() {
-//		return "Ingredient [ingredientId=" + ingredientId + ", ingredientName=" + ingredientName + ", ingredientType="
-//				+ ingredientType + ", ingredientDescription=" + ingredientDescription + ", calorieCount=" + calorieCount
-//				+ ", recipe=" + recipe + "]";
-//	}
 }
